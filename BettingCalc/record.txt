@@ -1,0 +1,21 @@
+Ayaan	120	0		blue		
+Dhruv	-10	0				
+Jerry	70	0				
+Vihaan	60	0				
+Greg	60	0				
+Ian	59	0				
+Matthew	2080	0				
+Chris	840	0				
+Crystal	226	0				
+Zachary	140	0				
+Xavier	2786	2		blue		
+Maria	0	0				
+Arjun	0	0				
+Jack	522	0	red			
+Ali	80	0				
+Calvin	10	0				
+Martin	2000	0		blue		
+Noel	120	0				
+Ruby	160	10	red			
+Will	25	0				
+Arnnav	30	0				

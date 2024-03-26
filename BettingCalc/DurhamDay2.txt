@@ -1,0 +1,19 @@
+Martin	0	10				
+Xavier	0	0				
+Zachary	40	0			0	
+Crystal	10	0			0	
+Maria	0	0			0	
+Ali	80	5				
+William	40	0			0	
+Calvin	0	0			0	
+Noel	40	0			0	
+Rahul	0	0			0	
+Adam	0	10			0	
+Arjun	5	0			0	
+Ruby	42	10			0	
+Chris	60	20			0	
+Jack	80	20			0	
+greg	20	0			0	
+dhruv	0	0				
+NaN	0				
+Daniel	5120

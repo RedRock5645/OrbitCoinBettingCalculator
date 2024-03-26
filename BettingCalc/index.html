@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Orbit Coin</h1>
+  <div>
+    <br>
+  </div>
+  <h3>Game Results</h3>
+  <button onclick="addRedBets()">Red Alliance Wins!</button> <button onclick="addBlueBets()">Blue Alliance
+    Wins!</button> <button onclick="underReview()">Match Under Review</button>
+  <div>
+    <br>
+  </div>
+  <h3>Betters</h3> 
+  <table id="betting" width="500">
+    <thead bgcolor="orange">
+      <tr>
+        <th> Person </th>
+        <th> Total Money </th>
+        <th width="50"> Bet </th>
+        <th> RED Alliance </th>
+        <th> BLUE Alliance </th>
+        <th> Under Review </th>
+        <th> Review Alliance </th>
+      </tr>
+    </thead>
+    <tbody id="body"></tbody>
+  </table>
+  <div>
+    <br>
+  </div>
+  <dialog id="dialog">
+    <h4 id="recipent"> Name </h4>
+    <label for="amount">How much would you like to add?</label> <br>
+    <input type = "number" id="amount" name="amount"><br>
+    <div>
+      <br>
+    </div>
+    <button onclick="closeMoneyDialog()">confirm</button>
+  </dialog>
+
+  <label> Match Under Review Results: </label>
+  <button onclick="addRedReview()"> Red wins!</button> <button onclick="addBlueReview()"> Blue wins!</button>
+  
+
+  <h4> Add Person </h4>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <div>
+    <br>
+  </div>
+
+  <button onclick="addPerson()">Add Person</button>
+
+  
+
+  <script src="script.js">
+
+  </script>
+
+</body>
+
+</html>
