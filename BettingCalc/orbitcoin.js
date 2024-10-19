@@ -373,6 +373,24 @@ function sortPeople(type){
   loadTableData();
 }
 
+function pickWinner(){
+  let totalMoney = 0;
+  for (let i = 0; i<people.length;i++){
+    totalMoney += people[i].money;
+  }
+
+  let winNum = Math.floor(Math.random() * (totalMoney))+1;
+  let currentNum = 0;
+
+  for (let i = 0; i<people.length;i++){
+    currentNum +=people[i].money;
+    if (currentNum>=winNum){
+      return i;
+    }
+  }
+  reutrn -1;
+
+}
 
 const saveData = () => {
   const link = document.createElement("a");
