@@ -1,0 +1,167 @@
+html {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  display: inline-block;
+  background-image: url("https://images.unsplash.com/photo-1464802686167-b939a6910659?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  color: white;
+  ;}
+
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 5vw;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+table {
+  border: 1px solid;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+
+thead {
+  background-color: orange;
+  z-index: 0;
+}
+
+th {
+  border: 1px solid;
+  color:black;
+  width: 200px;
+  z-index: 0;
+}
+
+tbody{
+  
+  border: 1px solid;
+  z-index: 0;
+}
+
+.logo{
+  position:absolute;
+  top:20px;
+  right:400px;
+  height: 100px;
+  width:auto;
+  animation: logoAnimate 2s;  
+  transition-duration: 1s;
+  transition-property: transform;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
+@keyframes logoAnimate {
+  from 
+  {transform: translateX(10vw);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes spin {
+  from{
+    transform: rotate(1);
+  }
+  to {
+    transform: rotate(100);
+  }
+  
+}
+
+.modal {
+  color:black;
+  float:none;
+  display: none; /* Hidden by default */
+  position: sticky; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  position: sticky;
+  background-color:white;
+  bottom: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 200px; 
+  border-radius: 10px;
+  border: 5px solid #307bdd;
+  padding: 10px, 10px, 10px, 10px;
+  overflow: auto; /* Enable scroll if needed */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  
+}
+
+.resultDiv{
+  background-color: black;
+  float: right;
+  margin-right: -120px;
+  display: inline-block;
+  position:sticky;
+  bottom: 150px;
+  z-index: 2;
+  width: 100px;
+  height: 350px; 
+  border-radius: 10px;
+  border: 5px solid #307bdd;
+  border-style: double;
+  padding: 10px, 10px, 10px, 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.actionDiv{
+  background-color: black;
+  float: left;
+  margin-left: -120px;
+  position: sticky;
+  display: inline-block;
+  bottom: 200px;
+  z-index: 2;
+  width: 100px;
+  height: 300px; 
+  border-radius: 10px;
+  border: 5px solid #307bdd;
+  border-style: double;
+  padding: 10px, 10px, 10px, 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.payout-amount{
+  text-align: center;
+  width: 50px;
+}
+
+.sort-div{
+  width:300px;
+}
+
+.fileName{
+  width: 80px;
+}
+
+.fileInput{
+  display: block;
+  margin-left: 7px;
+  width: 90px;
+}

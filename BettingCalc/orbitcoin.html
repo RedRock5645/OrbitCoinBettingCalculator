@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="orbitcoin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1 onclick="createBetDialog() ">Orbit Coin</h1>
+  <div class="logo" id = "logo" onclick="spinOrbit()"> <img src="Orbit Robotics.jpg">
+  </div>
+  <br>
+  <div>
+    <input type="text" id="name" name="name">
+    <button id = "nameButton" onclick="addPerson()"> Add Person </button>
+  </div> 
+  <br>
+  <div class> 
+    <table>
+      <thead bgcolor="orange">
+        <tr>
+          <th> Person </th>
+          <th> Total Money </th>
+          <th width="50"> Bet </th>
+          <th> RED Alliance </th>
+          <th> BLUE Alliance </th>
+          <th> Under Review </th>
+          <th> Review Alliance </th>
+          <th> Accuracy </th>
+        </tr>
+      </thead>
+      <tbody id="body"></tbody>
+    </table>
+    <br><br>
+    <div class = "sort-div">
+      <h4> Sort Table </h4>
+      <button onclick = 'sortPeople("money")'> By Money</button>
+      <button onclick = 'sortPeople("accuracy")'> By Accuracy </button>
+      <button onclick = 'sortPeople("matches")'> By Matches bet </button>
+    </div>
+    
+  </div>
+  <div class = "resultDiv">
+    <h3>Game Results</h3>
+    <button onclick="addRedBets()">Red Alliance Wins!</button> 
+    <button onclick="addBlueBets()">Blue Alliance Wins!</button> 
+    <button onclick="underReview()">Match Under Review</button>
+    <br>
+    <h4> Match Under Review Results: </h4>
+    <button onclick="addRedReview()"> Red wins!</button> 
+    <button onclick="addBlueReview()"> Blue wins!</button>
+  </div>
+  <div class="actionDiv">
+      <h3>Actions</h3>
+      <div id = "scoutMode" onclick="scoutMode()"> Scout Mode </div>
+      <input type = "number" id = "payout-amount" class = "payout-amount" value="5" size = "4"><br>
+      <button onclick="payoutTime()"> Payout </button>
+      <br><br>
+      <input type = "text" id = "fileName" class = "fileName" placeholder="results">
+      <button onclick = "saveData()"> Save Data </button> 
+      <br><br>
+      <input type="file" id="fileInput" class = "fileInput">
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div id="bettingModal" class="modal">
+    <h4 id="betting-name"> </h4> <br>
+    <label for="betting-amount"> How much would you like to bet?</label> <br>
+    <button id = "allIn"> All in </button><br>
+    <button id = "subtractTen" onclick="addBet(-10)"> -10 </button>
+    <input type = "number" id="betting-amount" name="betting-amount">
+    <button id = "addTen" onclick="addBet(10)"> +10 </button>
+    <br><br>
+    
+    <button id = "betting-confirm"> confirm </button>
+  </div>
+
+  
+  
+  <script src="orbitcoin.js">
+
+  </script>
+
+</body>
+
+</html>

@@ -1,8 +1,9 @@
 var people = [];
 var dialogPerson = null;
-
+var scoutMoneyMode = true;
 
 class Person {
+  matches = 0;
   constructor(name) {
     this.name = name;
     this.money = 20;
@@ -10,6 +11,7 @@ class Person {
     this.alliance = "";
     this.reviewAmount = null;
     this.reviewAlliance = null;
+    this.accuracy = 0;
   }
   bet(betAmount) {
     this.bet = betAmount;
@@ -104,6 +106,9 @@ function addPerson() {
   people.push(newPerson);
 
   loadTableData();
+}
+function addScoutersMoney(){
+  if (scoutMoneyMode)
 }
 
 function underReview() {
