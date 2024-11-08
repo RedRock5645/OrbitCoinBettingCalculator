@@ -26,7 +26,7 @@ class Person {
     this.bet = betAmount;
   }
   allIn() {
-    this.bet = this.money;
+    this.bet = this.money-1;
   }
   win() {
     this.money -= -this.bet;
@@ -164,7 +164,7 @@ function underReview() {
     better.reviewAmount = better.bet;
     better.bet = 0;
     better.reviewAlliance = better.alliance;
-    better.alliance = 0;
+    better.alliance = null;
   }
   loadTableData();
 }
@@ -182,7 +182,7 @@ function addRedReview() {
     } else if (better.reviewAlliance == "blue") {
       if (better.reviewAmount != 0) {
         people[i].money -= better.reviewAmount;
-        people[i].accuracy = (better.accuracy * better.matches) / (betters.matches + 1)
+        people[i].accuracy = (better.accuracy * better.matches) / (better.matches + 1)
         people[i].matches -= -1;
       }
     }
@@ -219,17 +219,18 @@ function addBlueReview() {
 function openBetDialog(personIndex) {
   const better = people[personIndex]
   const dialog = document.getElementById("bettingModal");
+  let maxBet = better.money - 1;
   dialog.style.display = 'inline-block';
   document.getElementById("betting-name").innerHTML = better.name;
   const allIn = document.getElementById("allIn");
   document.getElementById("betting-amount").value = better.bet;
   allIn.onclick = function () {
-    document.getElementById("betting-amount").value = better.money;
+    document.getElementById("betting-amount").value = maxBet;
   };
   const submitButton = document.getElementById("betting-confirm");
   submitButton.onclick = function () {
     if (better.money < document.getElementById("betting-amount").value){
-      better.bet = better.money;
+      better.bet = maxBet;
     }
     else{
       better.bet = document.getElementById("betting-amount").value;
@@ -280,7 +281,7 @@ function payoutTime() {
 }
 
 function compareAcc(obj1, obj2){
-  if (obj1.accuracy >= obj2.accuracy){
+  if (Number(obj1.accuracy)>= obj2.accuracy){
     return true;
   }
   return false;
@@ -417,7 +418,7 @@ const saveData = () => {
           results[i] = results[i].split(",");
         }
         for (let i = 1; i<results.length-1; i++){
-          people.push(new Person(results[i][0], results[i][1], results[i][2], results[i][3]));
+          people.push(new Person(results[i][0], parseInt(results[i][1],10), parseFloat(results[i][2]), parseInt(results[i][3], 10)));
         }
         loadTableData();
     }

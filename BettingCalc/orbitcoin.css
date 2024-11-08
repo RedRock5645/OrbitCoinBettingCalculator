@@ -15,15 +15,16 @@ div {
 
 body {
   display: inline-block;
-  background-image: url("https://images.unsplash.com/photo-1464802686167-b939a6910659?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D");
+  /*background-image: url("https://images.unsplash.com/photo-1464802686167-b939a6910659?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D");
+  */
   background-size: cover;
-  color: white;
+  color: black;
   ;}
 
 
 h1 {
   text-align: center;
-  color: white;
+  color: darkblue;
   font-size: 5vw;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -93,7 +94,7 @@ tbody{
 }
 
 .modal {
-  color:black;
+  
   float:none;
   display: none; /* Hidden by default */
   position: sticky; /* Stay in place */
@@ -114,7 +115,7 @@ tbody{
 }
 
 .resultDiv{
-  background-color: black;
+  background-color: white;
   float: right;
   margin-right: -120px;
   display: inline-block;
@@ -131,7 +132,7 @@ tbody{
 }
 
 .actionDiv{
-  background-color: black;
+  background-color: white;
   float: left;
   margin-left: -120px;
   position: sticky;
