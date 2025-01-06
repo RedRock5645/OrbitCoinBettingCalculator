@@ -256,7 +256,7 @@ function scoutMode() {
     scoutingPayout = true;
   }
   else {
-    document.getElementById("scoutMode").style.backgroundColor = 'black';
+    document.getElementById("scoutMode").style.backgroundColor = 'white';
     for (let i = 0; i < people.length; i++) {
       people[i].selected = false;
     }
