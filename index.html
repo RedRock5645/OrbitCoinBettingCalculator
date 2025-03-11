@@ -40,18 +40,24 @@
       <button onclick = 'sortPeople("money")'> By Money</button>
       <button onclick = 'sortPeople("accuracy")'> By Accuracy </button>
       <button onclick = 'sortPeople("matches")'> By Matches bet </button>
+      <button onclick = 'sortPeople("name")'> By Name</button>
     </div>
     
   </div>
   <div class = "resultDiv">
     <h3>Game Results</h3>
-    <button onclick="addRedBets()">Red Alliance Wins!</button> 
-    <button onclick="addBlueBets()">Blue Alliance Wins!</button> 
-    <button onclick="underReview()">Match Under Review</button>
+    <button onclick="openConfirmDialog('red')">Red Alliance Wins!</button> 
+    <button onclick="openConfirmDialog('blue')">Blue Alliance Wins!</button> 
+    <button onclick="openConfirmDialog('review')">Match Under Review</button>
     <br>
     <h4> Match Under Review Results: </h4>
-    <button onclick="addRedReview()"> Red wins!</button> 
-    <button onclick="addBlueReview()"> Blue wins!</button>
+    <button onclick="openConfirmDialog('redReview')"> Red wins!</button> 
+    <button onclick="openConfirmDialog('blueReview')"> Blue wins!</button>
+  </div>
+  <div id = "confirmDiv" class = "confirmDiv">
+    <h3> Are you sure? </h3>
+    <button id = "yes-confirm">Yes</button>
+    <button onclick="closeConfirm()">No</button>
   </div>
   <div class="actionDiv">
       <h3>Actions</h3>

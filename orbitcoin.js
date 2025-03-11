@@ -26,7 +26,12 @@ class Person {
     this.bet = betAmount;
   }
   allIn() {
-    this.bet = this.money-1;
+    if (this.money ==1){
+      this.bet = 1;
+    }else{
+      this.bet = this.money-1;
+    }
+    
   }
   win() {
     this.money -= -this.bet;
@@ -129,6 +134,44 @@ function loadTableData() {
     accuracy.innerHTML = people[i].accuracy.toFixed(2) + " out of " + people[i].matches;
   }
 }
+
+function openConfirmDialog(colorType){
+  const div = document.getElementById("confirmDiv");
+  div.style.display = "inline-block";
+  const yes = document.getElementById("yes-confirm");
+  if (colorType == 'red'){
+    yes.onclick = function(){
+      addRedBets();
+      closeConfirm();
+    }
+  }else if (colorType == 'blue'){
+    yes.onclick = function(){
+      addBlueBets();
+      closeConfirm();
+    }
+  }else if (colorType == "redReview"){
+    yes.onclick = function(){
+      addRedReview();
+      closeConfirm();
+    }
+  }else if (colorType == "blueReview"){
+    yes.onclick = function(){
+      addBlueReview();
+      closeConfirm();
+    }
+  }else if (colorType == "review"){
+    yes.onclick = function(){
+      underReview()
+      closeConfirm();
+    }
+  }
+}
+
+function closeConfirm(){
+  const div = document.getElementById("confirmDiv");
+  div.style.display = "none";
+}
+
 function addRedBets() {
   const table = document.getElementById("body");
   for (let i = 0; i < people.length; i++) {
@@ -220,6 +263,9 @@ function openBetDialog(personIndex) {
   const better = people[personIndex]
   const dialog = document.getElementById("bettingModal");
   let maxBet = better.money - 1;
+  if (maxBet == 0){
+    maxBet = 1;
+  }
   dialog.style.display = 'inline-block';
   document.getElementById("betting-name").innerHTML = better.name;
   const allIn = document.getElementById("allIn");
@@ -300,6 +346,13 @@ function compareMatches(obj1, obj2){
   return false;
 }
 
+function compareNames(obj1, obj2){
+  if (obj1.name<=obj2.name){
+    return true;
+  }
+  return false;
+}
+
 function compare(obj1, obj2, type){
   if (type == "money"){
     return compareMoney(obj1, obj2);
@@ -309,6 +362,9 @@ function compare(obj1, obj2, type){
   }
   else if (type == "matches"){
     return compareMatches(obj1, obj2);
+  }
+  else if (type =="name"){
+    return compareNames(obj1, obj2);
   }
 }
 

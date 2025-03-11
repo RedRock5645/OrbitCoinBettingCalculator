@@ -34,7 +34,7 @@ table, th, td {
 }
 
 table {
-  border: 1px solid;
+  border: 1.5px solid;
   width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -65,13 +65,14 @@ tbody{
   right:400px;
   height: 100px;
   width:auto;
-  animation: logoAnimate 2s;  
+  animation: spin 2s;  
   transition-duration: 1s;
-  transition-property: transform;
 }
 
 .logo:hover{
-  transform: scale(1.1);
+  animation: spin 2s;  
+  transition-duration: 1s;
+  transition-property: transform;
 }
 
 @keyframes logoAnimate {
@@ -129,6 +130,27 @@ tbody{
   border-style: double;
   padding: 10px, 10px, 10px, 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.confirmDiv{
+  
+  float:none;
+  display: none; /* Hidden by default */
+  position: sticky; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  position: sticky;
+  background-color:white;
+  bottom: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 100px; 
+  border-radius: 10px;
+  border: 5px solid #307bdd;
+  padding: 10px, 10px, 10px, 10px;
+  overflow: auto; /* Enable scroll if needed */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  
 }
 
 .actionDiv{
